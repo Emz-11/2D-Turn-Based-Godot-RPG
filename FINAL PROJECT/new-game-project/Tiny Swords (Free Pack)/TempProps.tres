@@ -1,0 +1,228 @@
+[gd_resource type="TileSet" load_steps=55 format=3 uid="uid://ypmgpiemh18x"]
+
+[ext_resource type="Texture2D" uid="uid://2vq610n0yayk" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe1.png" id="1_bffnv"]
+[ext_resource type="Texture2D" uid="uid://duhb40xkcvtpr" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe2.png" id="2_d6b71"]
+[ext_resource type="Texture2D" uid="uid://sp3n75qqtay4" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks/Rock2.png" id="3_llj4e"]
+[ext_resource type="Texture2D" uid="uid://dskxx1d63qas1" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks/Rock3.png" id="4_6qab4"]
+[ext_resource type="Texture2D" uid="uid://47s4q6x8c2os" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks/Rock4.png" id="5_yo2mk"]
+[ext_resource type="Texture2D" uid="uid://dxdulekuqwfgw" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Stump 1.png" id="6_g7m1y"]
+[ext_resource type="Texture2D" uid="uid://66nnpafsmqku" path="res://Tiny SGoblin/Tiny Swords (Update 010)/Effects/Fire/Fire.png" id="7_sll2o"]
+[ext_resource type="Texture2D" uid="uid://dug2yftmrmyk8" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Stump 2.png" id="7_vtpdo"]
+[ext_resource type="Texture2D" uid="uid://cuysg8i2bh5i" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree1.png" id="8_sgate"]
+[ext_resource type="Texture2D" uid="uid://p45s3dk2tqbo" path="res://Tiny SGoblin/Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png" id="9_8vxcg"]
+[ext_resource type="Texture2D" uid="uid://cnu468dmi2jrr" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree2.png" id="9_jdnfs"]
+[ext_resource type="Texture2D" uid="uid://bdsp0xgbulpr" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree3.png" id="10_1pmuk"]
+[ext_resource type="Texture2D" uid="uid://bqf4ta27ci6pu" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png" id="11_uu812"]
+[ext_resource type="Texture2D" uid="uid://ct7pjb0wa5xun" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree4.png" id="12_d7ig2"]
+[ext_resource type="Texture2D" uid="uid://c7lh010ate4v8" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe4.png" id="13_t75th"]
+[ext_resource type="Texture2D" uid="uid://c6s0b7f23037q" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_01.png" id="14_ttvni"]
+[ext_resource type="Texture2D" uid="uid://c1gv66djslg4c" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_02.png" id="15_c0osl"]
+[ext_resource type="Texture2D" uid="uid://qktoy2yd8u0k" path="res://Tiny SGoblin/Tiny Swords (Update 010)/Terrain/Bridge/Bridge_fire.png" id="15_fmw4o"]
+[ext_resource type="Texture2D" uid="uid://ducvhln61r581" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_03.png" id="16_eq2tv"]
+[ext_resource type="Texture2D" uid="uid://ckcxj0o7xhacf" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Wood Resource/Wood Resource.png" id="16_perbq"]
+[ext_resource type="Texture2D" uid="uid://ckvjv2p4nbn6s" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_02.png" id="17_4i0r5"]
+[ext_resource type="Texture2D" uid="uid://uxtjrbjecopo" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_04.png" id="17_rbfy7"]
+[ext_resource type="Texture2D" uid="uid://buhgv2nvcyrc3" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_05.png" id="18_8q77f"]
+[ext_resource type="Texture2D" uid="uid://bq4cvq7mhuiqv" path="res://Tiny SGoblin/Tiny Swords (Update 010)/Effects/Explosion/Explosions.png" id="18_euodd"]
+[ext_resource type="Texture2D" uid="uid://bagnqgxjmjl2i" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks/Rock1.png" id="19_dkqwy"]
+[ext_resource type="Texture2D" uid="uid://dgmqvmikh7xq8" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Buildings/Black Buildings/House2.png" id="19_euodd"]
+[ext_resource type="Texture2D" uid="uid://oqu250dppay6" path="res://Tiny SGoblin/Tiny Swords (Update 010)/Resources/Gold Mine/GoldMine_Active.png" id="20_68wyf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhc3t"]
+texture = ExtResource("1_bffnv")
+texture_region_size = Vector2i(128, 128)
+0:0/animation_speed = 8.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fg3j2"]
+texture = ExtResource("2_d6b71")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsgsv"]
+texture = ExtResource("3_llj4e")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tqjw"]
+texture = ExtResource("4_6qab4")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o0leu"]
+texture = ExtResource("5_yo2mk")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46po1"]
+texture = ExtResource("6_g7m1y")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8vxcg"]
+texture = ExtResource("7_sll2o")
+texture_region_size = Vector2i(128, 128)
+0:0/animation_speed = 8.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m76pa"]
+texture = ExtResource("7_vtpdo")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fmw4o"]
+texture = ExtResource("9_8vxcg")
+texture_region_size = Vector2i(68, 128)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32.666664, -65.33333, -28, -65.33333, -28, 51.33333, -32.666664, 51.33333)
+0:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(23.333332, -65.33333, 28, -65.33333, 28, 51.33333, 23.333332, 51.33333)
+0:1/0/physics_layer_0/polygon_2/points = PackedVector2Array(-28, 46.666664, -28, 51.33333, 23.333332, 51.33333, 23.333332, 46.666664)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cuuju"]
+texture = ExtResource("8_sgate")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_prj7w"]
+texture = ExtResource("9_jdnfs")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1t3nn"]
+texture = ExtResource("10_1pmuk")
+texture_region_size = Vector2i(192, 192)
+0:0/animation_speed = 8.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 64)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 0, -7, 7, -7, 7, 7, -7, 7)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_104it"]
+texture = ExtResource("11_uu812")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aaw8c"]
+texture = ExtResource("12_d7ig2")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_perbq"]
+texture = ExtResource("15_fmw4o")
+texture_region_size = Vector2i(64, 64)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23.333332, -23.333332, 23.333332, -23.333332, 23.333332, 23.333332, -23.333332, 23.333332)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.666667, -28, 28, -28, 23.333332, 18.666664, 14, 18.666664, -4.666667, 18.666664)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ih3k3"]
+texture = ExtResource("16_perbq")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23.333332, -14, 23.333332, -14, 23.333332, 14, -23.333332, 14)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68wyf"]
+texture = ExtResource("17_4i0r5")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4373q"]
+texture = ExtResource("18_euodd")
+texture_region_size = Vector2i(192, 192)
+1:0/animation_speed = 7.0
+1:0/animation_frame_0/duration = 1.0
+1:0/animation_frame_1/duration = 1.0
+1:0/animation_frame_2/duration = 1.0
+1:0/animation_frame_3/duration = 1.0
+1:0/animation_frame_4/duration = 1.0
+1:0/animation_frame_5/duration = 1.0
+1:0/animation_frame_6/duration = 1.0
+1:0/animation_frame_7/duration = 1.0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asnd0"]
+texture = ExtResource("19_euodd")
+texture_region_size = Vector2i(128, 192)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-65.33333, -4.666667, -46.666664, -42, 42, -88.666664, 56, -32.666664, 65.33333, 4.666666, 56, 51.33333, -9.333334, 84, -60.666664, 51.33333)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c8cc2"]
+texture = ExtResource("20_68wyf")
+texture_region_size = Vector2i(192, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_633rx"]
+texture = ExtResource("13_t75th")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vmy34"]
+texture = ExtResource("14_ttvni")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n0hme"]
+texture = ExtResource("15_c0osl")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bcbx"]
+texture = ExtResource("16_eq2tv")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0vdp"]
+texture = ExtResource("17_rbfy7")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxcc1"]
+texture = ExtResource("18_8q77f")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ubf5d"]
+texture = ExtResource("19_dkqwy")
+texture_region_size = Vector2i(64, 64)
+
+[resource]
+tile_size = Vector2i(28, 28)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_rhc3t")
+sources/1 = SubResource("TileSetAtlasSource_fg3j2")
+sources/2 = SubResource("TileSetAtlasSource_104it")
+sources/3 = SubResource("TileSetAtlasSource_633rx")
+sources/4 = SubResource("TileSetAtlasSource_vmy34")
+sources/5 = SubResource("TileSetAtlasSource_n0hme")
+sources/6 = SubResource("TileSetAtlasSource_3bcbx")
+sources/7 = SubResource("TileSetAtlasSource_a0vdp")
+sources/8 = SubResource("TileSetAtlasSource_wxcc1")
+sources/9 = SubResource("TileSetAtlasSource_ubf5d")
+sources/10 = SubResource("TileSetAtlasSource_nsgsv")
+sources/11 = SubResource("TileSetAtlasSource_5tqjw")
+sources/12 = SubResource("TileSetAtlasSource_o0leu")
+sources/13 = SubResource("TileSetAtlasSource_46po1")
+sources/15 = SubResource("TileSetAtlasSource_m76pa")
+sources/17 = SubResource("TileSetAtlasSource_cuuju")
+sources/18 = SubResource("TileSetAtlasSource_prj7w")
+sources/19 = SubResource("TileSetAtlasSource_1t3nn")
+sources/20 = SubResource("TileSetAtlasSource_aaw8c")
+sources/14 = SubResource("TileSetAtlasSource_8vxcg")
+sources/16 = SubResource("TileSetAtlasSource_fmw4o")
+sources/21 = SubResource("TileSetAtlasSource_perbq")
+sources/22 = SubResource("TileSetAtlasSource_ih3k3")
+sources/23 = SubResource("TileSetAtlasSource_68wyf")
+sources/24 = SubResource("TileSetAtlasSource_4373q")
+sources/25 = SubResource("TileSetAtlasSource_asnd0")
+sources/26 = SubResource("TileSetAtlasSource_c8cc2")

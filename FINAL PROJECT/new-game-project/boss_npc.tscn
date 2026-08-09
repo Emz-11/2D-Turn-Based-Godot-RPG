@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://jggnj4t3dkdj"]
+
+[ext_resource type="Script" uid="uid://cvajy3ydnvmcv" path="res://boss_npc.gd" id="1_wdsob"]
+[ext_resource type="Texture2D" uid="uid://vudooptif3ph" path="res://Tiny SGoblin/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="1_ysnql"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdsob"]
+atlas = ExtResource("1_ysnql")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koaix"]
+atlas = ExtResource("1_ysnql")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwc0v"]
+atlas = ExtResource("1_ysnql")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fsw3"]
+atlas = ExtResource("1_ysnql")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_582i6"]
+atlas = ExtResource("1_ysnql")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4d0l"]
+atlas = ExtResource("1_ysnql")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxq7r"]
+atlas = ExtResource("1_ysnql")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jtfr0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdsob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_koaix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwc0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fsw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_582i6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4d0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxq7r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ka4os"]
+radius = 15.360004
+height = 51.200012
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wdsob"]
+radius = 56.0
+height = 112.0
+
+[node name="Node2D" type="CharacterBody2D"]
+script = ExtResource("1_wdsob")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3.8146973e-06, -48.000004)
+scale = Vector2(1.5416667, 1.5624999)
+sprite_frames = SubResource("SpriteFrames_jtfr0")
+autoplay = "default"
+frame_progress = 0.6269908
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.8146973e-06, -48.000004)
+scale = Vector2(1.5416667, 1.5624999)
+shape = SubResource("CapsuleShape2D_ka4os")
+
+[node name="BossHurtBox" type="Area2D" parent="."]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BossHurtBox"]
+position = Vector2(0, -40)
+shape = SubResource("CapsuleShape2D_wdsob")

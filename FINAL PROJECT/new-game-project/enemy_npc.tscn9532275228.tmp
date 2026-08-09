@@ -1,0 +1,101 @@
+[gd_scene load_steps=14 format=3 uid="uid://cx11jpcbi1u3u"]
+
+[ext_resource type="Script" uid="uid://c3p5j7565gsx" path="res://enemy_npc.gd" id="1_21ppu"]
+[ext_resource type="Texture2D" uid="uid://d0mtaiygg8ibb" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Units/Red Units/Warrior/Warrior_Idle.png" id="1_l6jh7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21ppu"]
+atlas = ExtResource("1_l6jh7")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4p1y"]
+atlas = ExtResource("1_l6jh7")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oufe1"]
+atlas = ExtResource("1_l6jh7")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fna7a"]
+atlas = ExtResource("1_l6jh7")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smcvc"]
+atlas = ExtResource("1_l6jh7")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rva4"]
+atlas = ExtResource("1_l6jh7")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl3v3"]
+atlas = ExtResource("1_l6jh7")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yekv0"]
+atlas = ExtResource("1_l6jh7")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tqim1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21ppu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4p1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oufe1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fna7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smcvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rva4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl3v3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yekv0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wtsaa"]
+radius = 32.0
+height = 80.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_21ppu"]
+radius = 32.0
+height = 80.0
+
+[node name="EnemyRed1" type="CharacterBody2D"]
+script = ExtResource("1_21ppu")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_tqim1")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.76499045
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
+shape = SubResource("CapsuleShape2D_wtsaa")
+
+[node name="HurtBox" type="Area2D" parent="."]
+position = Vector2(0, -8)
+collision_layer = 8
+collision_mask = 0
+input_pickable = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_21ppu")

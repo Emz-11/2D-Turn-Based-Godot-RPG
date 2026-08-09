@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://3y08uxhn0sx"
+path="res://.godot/imported/BlueRoundbitmap.png-bd0034580addaa4b8991512234b13a19.res"
+
+[deps]
+
+source_file="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/BlueRoundbitmap.png"
+dest_files=["res://.godot/imported/BlueRoundbitmap.png-bd0034580addaa4b8991512234b13a19.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

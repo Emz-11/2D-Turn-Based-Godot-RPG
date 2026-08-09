@@ -1,0 +1,13 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c3pvqk6nh7cc2"]
+
+[sub_resource type="FontVariation" id="FontVariation_46dp7"]
+fallbacks = Array[Font]([null])
+
+[resource]
+line_spacing = 5.0
+font = SubResource("FontVariation_46dp7")
+font_size = 22
+font_color = Color(1, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)

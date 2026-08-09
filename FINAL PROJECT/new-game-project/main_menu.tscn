@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://b500ddr4437cj"]
+
+[ext_resource type="Texture2D" uid="uid://xhc1qnjjy58j" path="res://Tiny SGoblin/Tiny Swords (Update 010)/UI/Buttons/Button_Red_3Slides.png" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://r7m52t10ghup" path="res://main_menu.gd" id="1_jix8l"]
+[ext_resource type="PackedScene" uid="uid://dagq50momtq3j" path="res://main_menu_background.tscn" id="2_glbon"]
+[ext_resource type="Texture2D" uid="uid://ba27fqorllgpe" path="res://Tiny SGoblin/Tiny Swords (Update 010)/UI/Buttons/Button_Red_3Slides_Pressed.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://ctyb82ac1rg2e" path="res://Tiny SGoblin/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="3_glbon"]
+
+[node name="MainMenu" type="Control"]
+light_mask = 7
+visibility_layer = 7
+z_index = 150
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jix8l")
+
+[node name="MainMenuBackground" parent="." instance=ExtResource("2_glbon")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -19.0
+offset_top = -27.0
+offset_right = 581.0
+offset_bottom = 1053.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="NewGame" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_fu7sn")
+texture_pressed = ExtResource("2_jix8l")
+texture_hover = ExtResource("3_glbon")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/NewGame"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(14.941092, 14.941092, 14.941092, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "New Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Controls" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_fu7sn")
+texture_pressed = ExtResource("2_jix8l")
+texture_hover = ExtResource("3_glbon")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Controls"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(14.941092, 14.941092, 14.941092, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Exit" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_fu7sn")
+texture_pressed = ExtResource("2_jix8l")
+texture_hover = ExtResource("3_glbon")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Exit"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(14.941092, 14.941092, 14.941092, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

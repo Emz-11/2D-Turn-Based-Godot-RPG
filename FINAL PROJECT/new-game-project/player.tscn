@@ -1,0 +1,287 @@
+[gd_scene load_steps=30 format=3 uid="uid://35gfgaqwnbp3"]
+
+[ext_resource type="Texture2D" uid="uid://gndubvu1qob7" path="res://Tiny SGoblin/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://5dvyhlxtgem6" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dp55tdr5y1hkf" path="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Human Avatars/Avatars_16.png" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://bfry0k2y6dv4g" path="res://Tiny SGoblin/Tiny Swords (Update 010)/UI/Banners/Banner_Vertical.png" id="4_hqtel"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(64, 51.627106)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dw050"]
+animation = &"attack_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b26j0"]
+animation = &"attack_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n7ghd"]
+animation = &"attack_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nvl01"]
+animation = &"attack_down"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_ivps1"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_dw050")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_b26j0")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_n7ghd")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_nvl01")
+blend_point_3/pos = Vector2(0, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_urp6f"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_bwjto"]
+graph_offset = Vector2(-67.77313, 36.17881)
+nodes/output/position = Vector2(1040, 240)
+nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_ivps1")
+nodes/BlendSpace2D/position = Vector2(280, 240)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_urp6f")
+nodes/TimeScale/position = Vector2(680, 240)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"BlendSpace2D"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2hs0m"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1jxqw"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dw050"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b26j0"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n7ghd"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_onrkg"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i3pqv"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hqtel"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nvl01"]
+states/Start/position = Vector2(179, 100)
+states/attack/node = SubResource("AnimationNodeBlendTree_bwjto")
+states/attack/position = Vector2(540, 231)
+states/idle/node = SubResource("AnimationNodeAnimation_2hs0m")
+states/idle/position = Vector2(331, 100)
+states/run/node = SubResource("AnimationNodeAnimation_1jxqw")
+states/run/position = Vector2(540, 30)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_dw050"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_b26j0"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_n7ghd"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_onrkg"), "run", "attack", SubResource("AnimationNodeStateMachineTransition_i3pqv"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_hqtel")]
+graph_offset = Vector2(-115.16429, 16)
+
+[sub_resource type="Animation" id="Animation_onrkg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_2hs0m"]
+resource_name = "attack_down"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27, 28, 29]
+}
+
+[sub_resource type="Animation" id="Animation_sweqy"]
+resource_name = "attack_right"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15, 16, 17]
+}
+
+[sub_resource type="Animation" id="Animation_1jxqw"]
+resource_name = "attack_up"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [36, 37, 38, 39, 40, 41]
+}
+
+[sub_resource type="Animation" id="Animation_hqtel"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_i3pqv"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sweqy"]
+_data = {
+&"RESET": SubResource("Animation_onrkg"),
+&"attack_down": SubResource("Animation_2hs0m"),
+&"attack_right": SubResource("Animation_sweqy"),
+&"attack_up": SubResource("Animation_1jxqw"),
+&"idle": SubResource("Animation_hqtel"),
+&"run": SubResource("Animation_i3pqv")
+}
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 11
+collision_mask = 11
+script = ExtResource("1_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+shape = SubResource("CapsuleShape2D_i3pqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_4flbx")
+hframes = 6
+vframes = 8
+
+[node name="HitBox" type="Area2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 11
+collision_mask = 11
+input_pickable = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0, -33.813553)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+tree_root = SubResource("AnimationNodeStateMachine_nvl01")
+anim_player = NodePath("../AnimationPlayer")
+parameters/attack/BlendSpace2D/blend_position = Vector2(0, 0)
+parameters/attack/TimeScale/scale = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
+libraries = {
+&"": SubResource("AnimationLibrary_sweqy")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PlayerIcon" type="TextureRect" parent="."]
+z_index = 50
+offset_left = -680.0
+offset_top = -466.0
+offset_right = -543.0
+offset_bottom = -344.0
+texture = ExtResource("3_i3pqv")
+expand_mode = 1
+
+[node name="PlayerLabelHP" type="Label" parent="PlayerIcon"]
+z_index = 50
+layout_mode = 0
+offset_left = 104.0
+offset_top = 98.0
+offset_right = 293.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(0.003921569, 0.64705884, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+
+[node name="ExperienceLabel" type="Label" parent="PlayerIcon"]
+z_index = 50
+layout_mode = 0
+offset_left = 104.0
+offset_top = 114.0
+offset_right = 293.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0.003921569, 0.64705884, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+
+[node name="LevelBanner" type="TextureRect" parent="PlayerIcon"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 130.0
+offset_right = 144.0
+offset_bottom = 178.0
+texture = ExtResource("4_hqtel")
+expand_mode = 1
+
+[node name="LevelLabel" type="Label" parent="PlayerIcon/LevelBanner"]
+z_index = 50
+layout_mode = 0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.003921569, 0.64705884, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

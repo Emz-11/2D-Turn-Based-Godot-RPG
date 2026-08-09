@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://djumaemo1nejv"
+path="res://.godot/imported/bitmaskbutton.png-06954c32713be8885b25021b30de5a39.res"
+
+[deps]
+
+source_file="res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/bitmaskbutton.png"
+dest_files=["res://.godot/imported/bitmaskbutton.png-06954c32713be8885b25021b30de5a39.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
